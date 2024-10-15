@@ -2,7 +2,7 @@
 
 UBC is a big place, and involves a large number of people doing a variety of tasks. The goal of this project is to provide a way to perform some of the tasks required to run the university and to enable effective querying of the metadata from around campus. This will involve working with courses, prerequisites, past course averages, room scheduling, and timetable creation.
 
-The backend of this program supports various types of queries. However, the frontend only supports average grade query for a course in a specific year. The backend queries are based on the EBNF described below.
+The backend of this program supports various types of queries. However, the frontend only supports average grade query for a course in a specific year. The backend queries ARE implemented based on the EBNF described below.
 
 QUERY ::='{'BODY ', ' OPTIONS (', ' TRANSFORMATIONS)? '}'  
 BODY ::= 'WHERE:{' (FILTER)? '}'  
@@ -32,23 +32,25 @@ idstring ::= [^_]+ // One or more of any character, except underscore.
 inputstring ::= [^*]* // zero or more of any character except asterisk.  
 applykey ::= [^_]+ // one or more of any character except underscore.  
 
-1. WHERE defines which sections should be included in the results.
-1. COLUMNS defines which keys should be included in each result.
-1. ORDER defines what order the results should be in.
-1. GROUP: Group the list of results into sets by some matching criteria.
-1. APPLY: Perform calculations across a set of results (ie. across a GROUP).
-2. MAX: Find the maximum value of a field. For numeric fields only.
-2. MIN: Find the minimum value of a field. For numeric fields only.
-2. AVG: Find the average value of a field. For numeric fields only.
-2. SUM: Find the sum of a field. For numeric fields only.
-2. COUNT: Count the number of unique occurrences of a field. For both numeric and string fields.
-1. SORT: Order results on one or more columns.
-2. You can sort by a single column as in C1, e.g., "ORDER": "sections_avg"; or
-2. You can sort by multiple columns on either ascending/descending order by specifying these options in an  object  (see example query below)
-3. "dir": "UP": Sort results ascending.
-3. "dir": "DOWN": Sort results descending.
-3. "keys": ["sections_avg"]: sorts by a single key
-3. "keys": ["sections_year", "sections_avg"]: sorts by multiple keys.  In this example the course average should be used to resolve ties for courses in the same year
+- **WHERE** defines which sections should be included in the results.
+- **COLUMNS** defines which keys should be included in each result.
+- **ORDER** defines what order the results should be in.
+- **GROUP**: Group the list of results into sets by some matching criteria.
+- **APPLY**: Perform calculations across a set of results (i.e., across a **GROUP**).
+  - **MAX**: Find the maximum value of a field. For numeric fields only.
+  - **MIN**: Find the minimum value of a field. For numeric fields only.
+  - **AVG**: Find the average value of a field. For numeric fields only.
+  - **SUM**: Find the sum of a field. For numeric fields only.
+  - **COUNT**: Count the number of unique occurrences of a field. For both numeric *and* string fields.
+
+- **SORT**: Order results on one or more columns.
+  - You can sort by a single column as in C1, e.g., `"ORDER": "sections_avg"`;
+  - You can sort by multiple columns on either ascending/descending order by specifying these options in an object (see example query below):
+    - `"dir": "UP"`: Sort results ascending.
+    - `"dir": "DOWN"`: Sort results descending.
+    - `"keys": ["sections_avg"]`: Sorts by a single key.
+    - `"keys": ["sections_year", "sections_avg"]`: Sorts by multiple keys. In this example, the course average should be used to resolve ties for courses in the same year.
+
 
 ## Configuring your environment
 
