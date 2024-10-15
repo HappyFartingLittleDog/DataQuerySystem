@@ -1,5 +1,54 @@
 # CPSC 310 Project Repository
 
+UBC is a big place, and involves a large number of people doing a variety of tasks. The goal of this project is to provide a way to perform some of the tasks required to run the university and to enable effective querying of the metadata from around campus. This will involve working with courses, prerequisites, past course averages, room scheduling, and timetable creation.
+
+The backend of this program supports various types of queries. However, the frontend only supports average grade query for a course in a specific year. The backend queries are based on the EBNF described below.
+
+QUERY ::='{'BODY ', ' OPTIONS (', ' TRANSFORMATIONS)? '}'
+BODY ::= 'WHERE:{' (FILTER)? '}'
+OPTIONS ::= 'OPTIONS:{' COLUMNS (', ' SORT)? '}'
+TRANSFORMATIONS ::= 'TRANSFORMATIONS: {' GROUP ', ' APPLY '}'
+FILTER ::= LOGICCOMPARISON | MCOMPARISON | SCOMPARISON | NEGATION
+LOGICCOMPARISON ::= LOGIC ':[{' FILTER ('}, {' FILTER )* '}]' 
+MCOMPARISON ::= MCOMPARATOR ':{' mkey ':' number '}' 
+SCOMPARISON ::= 'IS:{' skey ':' [*]? inputstring [*]? '}'  // Asterisks should act as wildcards. Optional.
+NEGATION ::= 'NOT :{' FILTER '}'
+LOGIC ::= 'AND' | 'OR'
+MCOMPARATOR ::= 'LT' | 'GT' | 'EQ'
+COLUMNS ::= 'COLUMNS:[' ANYKEY (',' ANYKEY)* ']'
+SORT ::= 'ORDER: ' ('{ dir:'  DIRECTION ', keys: [ ' ANYKEY (',' ANYKEY)* ']}') | ANYKEY
+DIRECTION ::= 'UP' | 'DOWN' 
+ANYKEY ::= key | applykey
+GROUP ::= 'GROUP: [' (key ',')* key ']'                                                         
+APPLY ::= 'APPLY: [' (APPLYRULE (', ' APPLYRULE )* )? ']' 
+APPLYRULE ::= '{' applykey ': {' APPLYTOKEN ':' key '}}'
+APPLYTOKEN ::= 'MAX' | 'MIN' | 'AVG' | 'COUNT' | 'SUM'
+key ::= mkey | skey
+mkey ::= idstring '_' mfield
+skey ::= idstring '_' sfield
+mfield ::= 'avg' | 'pass' | 'fail' | 'audit' | 'year' | 'lat' | 'lon' | 'seats'
+sfield ::=  'dept' | 'id' | 'instructor' | 'title' | 'uuid' | 'fullname' | 'shortname' | 'number' | 'name' | 'address' | 'type' | 'furniture' | 'href' 
+idstring ::= [^_]+ // One or more of any character, except underscore.
+inputstring ::= [^*]* // zero or more of any character except asterisk.
+applykey ::= [^_]+ // one or more of any character except underscore.
+
+1. WHERE defines which sections should be included in the results.
+1. COLUMNS defines which keys should be included in each result.
+1. ORDER defines what order the results should be in.
+1. GROUP: Group the list of results into sets by some matching criteria.
+1. APPLY: Perform calculations across a set of results (ie. across a GROUP).
+2. MAX: Find the maximum value of a field. For numeric fields only.
+2. MIN: Find the minimum value of a field. For numeric fields only.
+2. AVG: Find the average value of a field. For numeric fields only.
+2. SUM: Find the sum of a field. For numeric fields only.
+2. COUNT: Count the number of unique occurrences of a field. For both numeric and string fields.
+1. SORT: Order results on one or more columns.
+2. You can sort by a single column as in C1, e.g., "ORDER": "sections_avg"; or
+2. You can sort by multiple columns on either ascending/descending order by specifying these options in an  object  (see example query below)
+3. "dir": "UP": Sort results ascending.
+3. "dir": "DOWN": Sort results descending.
+3. "keys": ["sections_avg"]: sorts by a single key
+3. "keys": ["sections_year", "sections_avg"]: sorts by multiple keys.  In this example the course average should be used to resolve ties for courses in the same year
 
 ## Configuring your environment
 
@@ -27,13 +76,13 @@ In the project folder:
 
 1. `yarn pretty` to prettify your project code.
    
-1. `yarn start` to start the server, use localhost:4321 to access
+1. `yarn start` to start the server.
 
 
 
-## Running and testing from an IDE
+## Running 
 
-IntelliJ Ultimate should be automatically configured the first time you open the project (IntelliJ Ultimate is a free download through their students program)
+Go to the project directory, run `yarn install`, then run `yarn start` to start the server and use localhost:4321 to access. To perform query, you need to add dataset first by selecting one of the zip file under test/resources/archives.
 
 ### License
 
