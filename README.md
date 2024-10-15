@@ -4,33 +4,33 @@ UBC is a big place, and involves a large number of people doing a variety of tas
 
 The backend of this program supports various types of queries. However, the frontend only supports average grade query for a course in a specific year. The backend queries are based on the EBNF described below.
 
-QUERY ::='{'BODY ', ' OPTIONS (', ' TRANSFORMATIONS)? '}'
-BODY ::= 'WHERE:{' (FILTER)? '}'
-OPTIONS ::= 'OPTIONS:{' COLUMNS (', ' SORT)? '}'
-TRANSFORMATIONS ::= 'TRANSFORMATIONS: {' GROUP ', ' APPLY '}'
-FILTER ::= LOGICCOMPARISON | MCOMPARISON | SCOMPARISON | NEGATION
-LOGICCOMPARISON ::= LOGIC ':[{' FILTER ('}, {' FILTER )* '}]' 
-MCOMPARISON ::= MCOMPARATOR ':{' mkey ':' number '}' 
-SCOMPARISON ::= 'IS:{' skey ':' [*]? inputstring [*]? '}'  // Asterisks should act as wildcards. Optional.
-NEGATION ::= 'NOT :{' FILTER '}'
-LOGIC ::= 'AND' | 'OR'
-MCOMPARATOR ::= 'LT' | 'GT' | 'EQ'
-COLUMNS ::= 'COLUMNS:[' ANYKEY (',' ANYKEY)* ']'
-SORT ::= 'ORDER: ' ('{ dir:'  DIRECTION ', keys: [ ' ANYKEY (',' ANYKEY)* ']}') | ANYKEY
-DIRECTION ::= 'UP' | 'DOWN' 
-ANYKEY ::= key | applykey
-GROUP ::= 'GROUP: [' (key ',')* key ']'                                                         
-APPLY ::= 'APPLY: [' (APPLYRULE (', ' APPLYRULE )* )? ']' 
-APPLYRULE ::= '{' applykey ': {' APPLYTOKEN ':' key '}}'
-APPLYTOKEN ::= 'MAX' | 'MIN' | 'AVG' | 'COUNT' | 'SUM'
-key ::= mkey | skey
-mkey ::= idstring '_' mfield
-skey ::= idstring '_' sfield
-mfield ::= 'avg' | 'pass' | 'fail' | 'audit' | 'year' | 'lat' | 'lon' | 'seats'
-sfield ::=  'dept' | 'id' | 'instructor' | 'title' | 'uuid' | 'fullname' | 'shortname' | 'number' | 'name' | 'address' | 'type' | 'furniture' | 'href' 
-idstring ::= [^_]+ // One or more of any character, except underscore.
-inputstring ::= [^*]* // zero or more of any character except asterisk.
-applykey ::= [^_]+ // one or more of any character except underscore.
+QUERY ::='{'BODY ', ' OPTIONS (', ' TRANSFORMATIONS)? '}'  
+BODY ::= 'WHERE:{' (FILTER)? '}'  
+OPTIONS ::= 'OPTIONS:{' COLUMNS (', ' SORT)? '}'  
+TRANSFORMATIONS ::= 'TRANSFORMATIONS: {' GROUP ', ' APPLY '}'  
+FILTER ::= LOGICCOMPARISON | MCOMPARISON | SCOMPARISON | NEGATION  
+LOGICCOMPARISON ::= LOGIC ':[{' FILTER ('}, {' FILTER )* '}]'   
+MCOMPARISON ::= MCOMPARATOR ':{' mkey ':' number '}'   
+SCOMPARISON ::= 'IS:{' skey ':' [*]? inputstring [*]? '}'  // Asterisks should act as wildcards. Optional.  
+NEGATION ::= 'NOT :{' FILTER '}'  
+LOGIC ::= 'AND' | 'OR'  
+MCOMPARATOR ::= 'LT' | 'GT' | 'EQ'  
+COLUMNS ::= 'COLUMNS:[' ANYKEY (',' ANYKEY)* ']'  
+SORT ::= 'ORDER: ' ('{ dir:'  DIRECTION ', keys: [ ' ANYKEY (',' ANYKEY)* ']}') | ANYKEY  
+DIRECTION ::= 'UP' | 'DOWN'   
+ANYKEY ::= key | applykey  
+GROUP ::= 'GROUP: [' (key ',')* key ']'                                                           
+APPLY ::= 'APPLY: [' (APPLYRULE (', ' APPLYRULE )* )? ']'   
+APPLYRULE ::= '{' applykey ': {' APPLYTOKEN ':' key '}}'  
+APPLYTOKEN ::= 'MAX' | 'MIN' | 'AVG' | 'COUNT' | 'SUM'  
+key ::= mkey | skey  
+mkey ::= idstring '_' mfield  
+skey ::= idstring '_' sfield  
+mfield ::= 'avg' | 'pass' | 'fail' | 'audit' | 'year' | 'lat' | 'lon' | 'seats'  
+sfield ::=  'dept' | 'id' | 'instructor' | 'title' | 'uuid' | 'fullname' | 'shortname' | 'number' | 'name' | 'address' | 'type' | 'furniture' | 'href'   
+idstring ::= [^_]+ // One or more of any character, except underscore.  
+inputstring ::= [^*]* // zero or more of any character except asterisk.  
+applykey ::= [^_]+ // one or more of any character except underscore.  
 
 1. WHERE defines which sections should be included in the results.
 1. COLUMNS defines which keys should be included in each result.
