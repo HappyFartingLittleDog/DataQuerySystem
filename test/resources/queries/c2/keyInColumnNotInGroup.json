@@ -1,0 +1,51 @@
+{
+	"title": "key in column not in group",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"LT": {
+						"rooms_seats": 100
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"sumSeats",
+				"countSeats"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"sumSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_seats"
+			],
+			"APPLY": [
+				{
+					"sumSeats": {
+						"SUM": "rooms_seats"
+					}
+				},
+				{
+					"countSeats": {
+						"COUNT": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

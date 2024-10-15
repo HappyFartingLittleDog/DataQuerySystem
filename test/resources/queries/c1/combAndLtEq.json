@@ -1,0 +1,181 @@
+{
+  "title": "Query combination of AND LT EQ",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "LT": {
+            "sections_pass": 2
+          }
+        },
+        {
+          "EQ": {
+            "sections_avg": 92
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_uuid"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"zool",
+      "sections_id":"549",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"masters thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"14989",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"pcth",
+      "sections_id":"549",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"ms thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"22918",
+      "sections_year":2008
+    },
+    {
+      "sections_dept":"pcth",
+      "sections_id":"549",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"ms thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"22919",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arth",
+      "sections_id":"599",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"master's thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"23555",
+      "sections_year":2010
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":92,
+      "sections_instructor":"lyon, annabel",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"46410",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"mech",
+      "sections_id":"597",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"proj mec studies",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"47468",
+      "sections_year":2011
+    },
+    {
+      "sections_dept":"mech",
+      "sections_id":"597",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"proj mec studies",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"47469",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"mech",
+      "sections_id":"698",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"seminar",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"47474",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":92,
+      "sections_instructor":"medved, maureen",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"578",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":92,
+      "sections_instructor":"taylor, timothy",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"75159",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"chil",
+      "sections_id":"599",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"child's lit",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"80544",
+      "sections_year":2012
+    },
+    {
+      "sections_dept":"chil",
+      "sections_id":"599",
+      "sections_avg":92,
+      "sections_instructor":"",
+      "sections_title":"child's lit",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"80545",
+      "sections_year":1900
+    }
+  ]
+}

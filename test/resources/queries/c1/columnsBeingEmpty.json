@@ -1,0 +1,16 @@
+{
+  "title": "Query with COLUMNS being empty",
+  "input": {
+    "WHERE":{
+      "LT":{
+        "sections_avg":50
+      }
+    },
+    "OPTIONS":{
+      "COLUMNS":[],
+      "ORDER":"sections_pass"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

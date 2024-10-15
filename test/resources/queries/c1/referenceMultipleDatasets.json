@@ -1,0 +1,20 @@
+{
+  "title": "Query referencing multiple datasets",
+  "input": {
+    "WHERE":{
+      "GT":{
+        "sections_avg":0,
+        "sections-2_avg":0
+      }
+    },
+    "OPTIONS":{
+      "COLUMNS":[
+        "sections-2_dept",
+        "sections-2_avg"
+      ],
+      "ORDER":"sections_avg"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

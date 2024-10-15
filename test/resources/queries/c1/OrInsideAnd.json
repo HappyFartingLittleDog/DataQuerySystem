@@ -1,0 +1,68 @@
+{
+	"title" : "or inside and",
+	"input" : {
+		"WHERE": {
+			"AND": [
+				{
+					"OR": [
+						{
+							"GT": {
+								"sections_avg": 99
+							}
+						},
+						{
+							"LT": {
+								"sections_avg":40
+							}
+						}
+					]
+				},
+				{
+					"OR": [
+						{
+							"IS": {
+								"sections_dept": "lfs"
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "math"
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_id",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected" : false,
+	"expected" :  [
+			{
+				"sections_dept": "lfs",
+				"sections_id": "100",
+				"sections_avg": 0
+			},
+			{
+				"sections_dept": "lfs",
+				"sections_id": "100",
+				"sections_avg": 0
+			},
+			{
+				"sections_dept": "math",
+				"sections_id": "527",
+				"sections_avg": 99.78
+			},
+			{
+				"sections_dept": "math",
+				"sections_id": "527",
+				"sections_avg": 99.78
+			}
+		]
+	}

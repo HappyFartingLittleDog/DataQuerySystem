@@ -1,0 +1,327 @@
+{
+  "title": "Query combination of NOT OR",
+  "input": {
+    "WHERE": {
+      "NOT": {
+        "OR": [
+          {
+            "GT": {
+              "sections_avg": 99
+            }
+          },
+          {
+            "LT": {
+              "sections_avg": 98
+            }
+          }
+        ]
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+	  {
+		  "sections_dept":"crwr",
+		  "sections_id":"599",
+		  "sections_avg":98,
+		  "sections_instructor":"grady, albert wayne",
+		  "sections_title":"thesis",
+		  "sections_pass":1,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"46412",
+		  "sections_year":2013
+	  },
+	  {
+		  "sections_dept":"crwr",
+		  "sections_id":"599",
+		  "sections_avg":98,
+		  "sections_instructor":"maillard, keith",
+		  "sections_title":"thesis",
+		  "sections_pass":1,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"46405",
+		  "sections_year":2013
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"421",
+		  "sections_avg":98.08,
+		  "sections_instructor":"cole, kenneth",
+		  "sections_title":"assess lrn diffi",
+		  "sections_pass":12,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"33779",
+		  "sections_year":2009
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"509",
+		  "sections_avg":98.21,
+		  "sections_instructor":"",
+		  "sections_title":"cl pro prim care",
+		  "sections_pass":14,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"73639",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"509",
+		  "sections_avg":98.21,
+		  "sections_instructor":"krist, jennifer",
+		  "sections_title":"cl pro prim care",
+		  "sections_pass":14,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"73638",
+		  "sections_year":2015
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"421",
+		  "sections_avg":98.36,
+		  "sections_instructor":"",
+		  "sections_title":"assess lrn diffi",
+		  "sections_pass":22,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"33781",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"519",
+		  "sections_avg":98.45,
+		  "sections_instructor":"",
+		  "sections_title":"dev el sk df&hrd",
+		  "sections_pass":11,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"49678",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"519",
+		  "sections_avg":98.45,
+		  "sections_instructor":"cannon, joanna",
+		  "sections_title":"dev el sk df&hrd",
+		  "sections_pass":11,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"49677",
+		  "sections_year":2011
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"578",
+		  "sections_avg":98.5,
+		  "sections_instructor":"",
+		  "sections_title":"fam nrs pract",
+		  "sections_pass":16,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"88152",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"578",
+		  "sections_avg":98.5,
+		  "sections_instructor":"burrows, marlene;harding, jillian;krist, jennifer;mccuaig, fairleth",
+		  "sections_title":"fam nrs pract",
+		  "sections_pass":16,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"88151",
+		  "sections_year":2013
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"578",
+		  "sections_avg":98.58,
+		  "sections_instructor":"",
+		  "sections_title":"fam nrs pract",
+		  "sections_pass":12,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"96251",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"578",
+		  "sections_avg":98.58,
+		  "sections_instructor":"",
+		  "sections_title":"fam nrs pract",
+		  "sections_pass":12,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"96250",
+		  "sections_year":2010
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"449",
+		  "sections_avg":98.58,
+		  "sections_instructor":"",
+		  "sections_title":"educ stds autism",
+		  "sections_pass":24,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"29256",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"449",
+		  "sections_avg":98.58,
+		  "sections_instructor":"grow, laura",
+		  "sections_title":"educ stds autism",
+		  "sections_pass":24,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"29255",
+		  "sections_year":2012
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"421",
+		  "sections_avg":98.7,
+		  "sections_instructor":"cole, kenneth",
+		  "sections_title":"assess lrn diffi",
+		  "sections_pass":10,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"33780",
+		  "sections_year":2009
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"509",
+		  "sections_avg":98.71,
+		  "sections_instructor":"",
+		  "sections_title":"cl pro prim care",
+		  "sections_pass":14,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"15344",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"nurs",
+		  "sections_id":"509",
+		  "sections_avg":98.71,
+		  "sections_instructor":"brew, nancy",
+		  "sections_title":"cl pro prim care",
+		  "sections_pass":14,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"15343",
+		  "sections_year":2011
+	  },
+	  {
+		  "sections_dept":"eece",
+		  "sections_id":"541",
+		  "sections_avg":98.75,
+		  "sections_instructor":"",
+		  "sections_title":"multimedia sys",
+		  "sections_pass":12,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"10236",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"eece",
+		  "sections_id":"541",
+		  "sections_avg":98.75,
+		  "sections_instructor":"coria, lino",
+		  "sections_title":"multimedia sys",
+		  "sections_pass":12,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"10235",
+		  "sections_year":2009
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"449",
+		  "sections_avg":98.76,
+		  "sections_instructor":"",
+		  "sections_title":"educ stds autism",
+		  "sections_pass":17,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"44817",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"449",
+		  "sections_avg":98.76,
+		  "sections_instructor":"grow, laura",
+		  "sections_title":"educ stds autism",
+		  "sections_pass":17,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"44816",
+		  "sections_year":2012
+	  },
+	  {
+		  "sections_dept":"epse",
+		  "sections_id":"449",
+		  "sections_avg":98.8,
+		  "sections_instructor":"grow, laura",
+		  "sections_title":"educ stds autism",
+		  "sections_pass":25,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"6320",
+		  "sections_year":2014
+	  },
+	  {
+		  "sections_dept":"spph",
+		  "sections_id":"300",
+		  "sections_avg":98.98,
+		  "sections_instructor":"",
+		  "sections_title":"work int health",
+		  "sections_pass":82,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"65070",
+		  "sections_year":1900
+	  },
+	  {
+		  "sections_dept":"spph",
+		  "sections_id":"300",
+		  "sections_avg":98.98,
+		  "sections_instructor":"frank, erica",
+		  "sections_title":"work int health",
+		  "sections_pass":82,
+		  "sections_fail":0,
+		  "sections_audit":0,
+		  "sections_uuid":"65069",
+		  "sections_year":2015
+	  }
+  ]
+}

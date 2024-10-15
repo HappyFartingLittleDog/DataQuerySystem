@@ -1,0 +1,265 @@
+{
+  "title": "Query combination of OR EQ IS",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "EQ": {
+            "sections_avg": 50
+          }
+        },
+        {
+          "IS": {
+            "sections_dept": "arbc"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"psyc",
+      "sections_id":"315",
+      "sections_avg":50,
+      "sections_instructor":"king, mary ann",
+      "sections_title":"childhood & adol",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"78941",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"chbe",
+      "sections_id":"474",
+      "sections_avg":50,
+      "sections_instructor":"",
+      "sections_title":"proc ctrl eng",
+      "sections_pass":7,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"56484",
+      "sections_year":2012
+    },
+    {
+      "sections_dept":"busi",
+      "sections_id":"441",
+      "sections_avg":50,
+      "sections_instructor":"",
+      "sections_title":"rl es manage i",
+      "sections_pass":3,
+      "sections_fail":2,
+      "sections_audit":0,
+      "sections_uuid":"11135",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"202",
+      "sections_avg":75.4,
+      "sections_instructor":"",
+      "sections_title":"intm classicl ii",
+      "sections_pass":18,
+      "sections_fail":2,
+      "sections_audit":0,
+      "sections_uuid":"15406",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"202",
+      "sections_avg":75.4,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intm classicl ii",
+      "sections_pass":18,
+      "sections_fail":2,
+      "sections_audit":0,
+      "sections_uuid":"15405",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"102",
+      "sections_avg":79,
+      "sections_instructor":"",
+      "sections_title":"intro classcl ii",
+      "sections_pass":21,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"15402",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"102",
+      "sections_avg":79,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intro classcl ii",
+      "sections_pass":21,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"15401",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"201",
+      "sections_avg":79.86,
+      "sections_instructor":"",
+      "sections_title":"intm classicl i",
+      "sections_pass":22,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"15404",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"201",
+      "sections_avg":79.86,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intm classicl i",
+      "sections_pass":22,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"15403",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"202",
+      "sections_avg":79.88,
+      "sections_instructor":"",
+      "sections_title":"intm classicl ii",
+      "sections_pass":8,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"55391",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"202",
+      "sections_avg":79.88,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intm classicl ii",
+      "sections_pass":8,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"55390",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"101",
+      "sections_avg":80,
+      "sections_instructor":"",
+      "sections_title":"intro: classical",
+      "sections_pass":40,
+      "sections_fail":1,
+      "sections_audit":2,
+      "sections_uuid":"55385",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"101",
+      "sections_avg":80,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intro: classical",
+      "sections_pass":40,
+      "sections_fail":1,
+      "sections_audit":2,
+      "sections_uuid":"55384",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"101",
+      "sections_avg":80.86,
+      "sections_instructor":"",
+      "sections_title":"intro: classical",
+      "sections_pass":34,
+      "sections_fail":2,
+      "sections_audit":1,
+      "sections_uuid":"15400",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"101",
+      "sections_avg":80.86,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intro: classical",
+      "sections_pass":34,
+      "sections_fail":2,
+      "sections_audit":1,
+      "sections_uuid":"15399",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"102",
+      "sections_avg":82.47,
+      "sections_instructor":"",
+      "sections_title":"intro classcl ii",
+      "sections_pass":17,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"55387",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"102",
+      "sections_avg":82.47,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intro classcl ii",
+      "sections_pass":17,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"55386",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"201",
+      "sections_avg":83.13,
+      "sections_instructor":"",
+      "sections_title":"intm classicl i",
+      "sections_pass":15,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"55389",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"arbc",
+      "sections_id":"201",
+      "sections_avg":83.13,
+      "sections_instructor":"ghazi, bushra seemi yasmin",
+      "sections_title":"intm classicl i",
+      "sections_pass":15,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"55388",
+      "sections_year":2015
+    }
+  ]
+}

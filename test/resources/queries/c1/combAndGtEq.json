@@ -1,0 +1,205 @@
+{
+  "title": "Query combination of AND GT EQ",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "sections_avg": 82
+          }
+        },
+        {
+          "EQ": {
+            "sections_fail": 5
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_pass"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"cons",
+      "sections_id":"101",
+      "sections_avg":84.08,
+      "sections_instructor":"",
+      "sections_title":"intro to conserv",
+      "sections_pass":84,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"68830",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"cons",
+      "sections_id":"101",
+      "sections_avg":84.08,
+      "sections_instructor":"arcese, peter",
+      "sections_title":"intro to conserv",
+      "sections_pass":84,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"68829",
+      "sections_year":2007
+    },
+    {
+      "sections_dept":"cpsc",
+      "sections_id":"221",
+      "sections_avg":82.45,
+      "sections_instructor":"wolfman, steven",
+      "sections_title":"basic alg&data",
+      "sections_pass":110,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"1275",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"musc",
+      "sections_id":"103",
+      "sections_avg":82.16,
+      "sections_instructor":"",
+      "sections_title":"intro musc thry",
+      "sections_pass":128,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"40825",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"cons",
+      "sections_id":"101",
+      "sections_avg":90.1,
+      "sections_instructor":"",
+      "sections_title":"intro to conserv",
+      "sections_pass":137,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"26317",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"cons",
+      "sections_id":"101",
+      "sections_avg":90.1,
+      "sections_instructor":"arcese, peter",
+      "sections_title":"intro to conserv",
+      "sections_pass":137,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"26316",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"cpsc",
+      "sections_id":"121",
+      "sections_avg":82.63,
+      "sections_instructor":"tsiknis, georgios",
+      "sections_title":"model comptn",
+      "sections_pass":147,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"62350",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"cnps",
+      "sections_id":"363",
+      "sections_avg":84.45,
+      "sections_instructor":"",
+      "sections_title":"career counselng",
+      "sections_pass":171,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"80712",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"frst",
+      "sections_id":"100",
+      "sections_avg":82.45,
+      "sections_instructor":"",
+      "sections_title":"sustain forests",
+      "sections_pass":231,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"62511",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"frst",
+      "sections_id":"100",
+      "sections_avg":82.45,
+      "sections_instructor":"larson, bruce",
+      "sections_title":"sustain forests",
+      "sections_pass":231,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"62510",
+      "sections_year":2016
+    },
+    {
+      "sections_dept":"frst",
+      "sections_id":"100",
+      "sections_avg":83.93,
+      "sections_instructor":"",
+      "sections_title":"sustain forests",
+      "sections_pass":245,
+      "sections_fail":5,
+      "sections_audit":1,
+      "sections_uuid":"54897",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"frst",
+      "sections_id":"100",
+      "sections_avg":83.93,
+      "sections_instructor":"larson, bruce",
+      "sections_title":"sustain forests",
+      "sections_pass":245,
+      "sections_fail":5,
+      "sections_audit":1,
+      "sections_uuid":"54896",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"lfs",
+      "sections_id":"100",
+      "sections_avg":84.1,
+      "sections_instructor":"",
+      "sections_title":"in land food com",
+      "sections_pass":262,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"57368",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"lfs",
+      "sections_id":"100",
+      "sections_avg":84.1,
+      "sections_instructor":"",
+      "sections_title":"in land food com",
+      "sections_pass":262,
+      "sections_fail":5,
+      "sections_audit":0,
+      "sections_uuid":"57367",
+      "sections_year":2014
+    }
+  ]
+}

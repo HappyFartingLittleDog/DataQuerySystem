@@ -1,0 +1,205 @@
+{
+  "title": "Query combination of AND IS GT",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "IS": {
+            "sections_dept": "math"
+          }
+        },
+        {
+          "GT": {
+            "sections_pass": 1000
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_audit"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"math",
+      "sections_id":"105",
+      "sections_avg":67.74,
+      "sections_instructor":"",
+      "sections_title":"int calc ap c&ss",
+      "sections_pass":1065,
+      "sections_fail":107,
+      "sections_audit":0,
+      "sections_uuid":"90009",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":63.51,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1018,
+      "sections_fail":186,
+      "sections_audit":0,
+      "sections_uuid":"72908",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":65.99,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1390,
+      "sections_fail":205,
+      "sections_audit":0,
+      "sections_uuid":"47011",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":66.31,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1137,
+      "sections_fail":190,
+      "sections_audit":0,
+      "sections_uuid":"33964",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":65.21,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1050,
+      "sections_fail":193,
+      "sections_audit":0,
+      "sections_uuid":"29715",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":64.55,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1012,
+      "sections_fail":203,
+      "sections_audit":0,
+      "sections_uuid":"13688",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":65.38,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1122,
+      "sections_fail":222,
+      "sections_audit":0,
+      "sections_uuid":"5131",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"100",
+      "sections_avg":68.73,
+      "sections_instructor":"",
+      "sections_title":"df calc ap ph sc",
+      "sections_pass":1171,
+      "sections_fail":91,
+      "sections_audit":0,
+      "sections_uuid":"46997",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"100",
+      "sections_avg":73.29,
+      "sections_instructor":"",
+      "sections_title":"df calc ap ph sc",
+      "sections_pass":1020,
+      "sections_fail":70,
+      "sections_audit":0,
+      "sections_uuid":"33953",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"100",
+      "sections_avg":66.8,
+      "sections_instructor":"",
+      "sections_title":"df calc ap ph sc",
+      "sections_pass":1044,
+      "sections_fail":106,
+      "sections_audit":0,
+      "sections_uuid":"31924",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"100",
+      "sections_avg":72.56,
+      "sections_instructor":"",
+      "sections_title":"df calc ap ph sc",
+      "sections_pass":1064,
+      "sections_fail":72,
+      "sections_audit":0,
+      "sections_uuid":"5118",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":66.28,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1166,
+      "sections_fail":190,
+      "sections_audit":1,
+      "sections_uuid":"89972",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"101",
+      "sections_avg":68.65,
+      "sections_instructor":"",
+      "sections_title":"int calc ap ph s",
+      "sections_pass":1114,
+      "sections_fail":145,
+      "sections_audit":1,
+      "sections_uuid":"27216",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"100",
+      "sections_avg":68.63,
+      "sections_instructor":"",
+      "sections_title":"df calc ap ph sc",
+      "sections_pass":1058,
+      "sections_fail":120,
+      "sections_audit":1,
+      "sections_uuid":"89960",
+      "sections_year":1900
+    }
+  ]
+}

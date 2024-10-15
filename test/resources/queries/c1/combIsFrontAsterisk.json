@@ -1,0 +1,76 @@
+{
+  "title": "Query combination of IS with asterisk in the front",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "sections_uuid": "*5555"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_dept"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"busi",
+      "sections_id":"344",
+      "sections_avg":63.24,
+      "sections_instructor":"",
+      "sections_title":"stat&comp ap val",
+      "sections_pass":107,
+      "sections_fail":25,
+      "sections_audit":0,
+      "sections_uuid":"95555",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"cnps",
+      "sections_id":"362",
+      "sections_avg":85.42,
+      "sections_instructor":"amundson, norman;morrison, marie",
+      "sections_title":"basic intvw skls",
+      "sections_pass":12,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"15555",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"ling",
+      "sections_id":"311",
+      "sections_avg":73.95,
+      "sections_instructor":"",
+      "sections_title":"stdy phonology",
+      "sections_pass":86,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"45555",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"lled",
+      "sections_id":"469",
+      "sections_avg":86.45,
+      "sections_instructor":"wilson, carole",
+      "sections_title":"resource-bsd tch",
+      "sections_pass":33,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"75555",
+      "sections_year":2009
+    }
+  ]
+}

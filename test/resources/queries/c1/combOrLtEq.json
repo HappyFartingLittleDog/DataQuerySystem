@@ -1,0 +1,145 @@
+{
+  "title": "Query combination of OR LT EQ",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "LT": {
+            "sections_avg": 5
+          }
+        },
+        {
+          "EQ": {
+            "sections_avg": 98
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"lfs",
+      "sections_id":"100",
+      "sections_avg":0,
+      "sections_instructor":"",
+      "sections_title":"in land food com",
+      "sections_pass":0,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"56403",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"lfs",
+      "sections_id":"100",
+      "sections_avg":0,
+      "sections_instructor":"",
+      "sections_title":"in land food com",
+      "sections_pass":0,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"56402",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"frst",
+      "sections_id":"202",
+      "sections_avg":0,
+      "sections_instructor":"",
+      "sections_title":"forest ecology",
+      "sections_pass":0,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"89536",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"wood",
+      "sections_id":"475",
+      "sections_avg":1,
+      "sections_instructor":"",
+      "sections_title":"prpty,ident&uses",
+      "sections_pass":0,
+      "sections_fail":2,
+      "sections_audit":0,
+      "sections_uuid":"49835",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"busi",
+      "sections_id":"330",
+      "sections_avg":4,
+      "sections_instructor":"",
+      "sections_title":"found re apprai",
+      "sections_pass":0,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"16428",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"busi",
+      "sections_id":"330",
+      "sections_avg":4,
+      "sections_instructor":"",
+      "sections_title":"found re apprai",
+      "sections_pass":0,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"16427",
+      "sections_year":2016
+    },
+    {
+      "sections_dept":"fopr",
+      "sections_id":"362",
+      "sections_avg":4.5,
+      "sections_instructor":"bendickson, dennis",
+      "sections_title":"sustnbt&frst ops",
+      "sections_pass":0,
+      "sections_fail":4,
+      "sections_audit":0,
+      "sections_uuid":"84769",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":98,
+      "sections_instructor":"grady, albert wayne",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"46412",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":98,
+      "sections_instructor":"maillard, keith",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"46405",
+      "sections_year":2013
+    }
+  ]
+}

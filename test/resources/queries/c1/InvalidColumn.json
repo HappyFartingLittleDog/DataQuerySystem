@@ -1,0 +1,23 @@
+{
+	"title": "Query with invalid FILTER key",
+	"input":
+	{
+		"WHERE": {
+			"GT": {
+				"sections_avg": 98
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				0,
+				"sections_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
+
+
+
+

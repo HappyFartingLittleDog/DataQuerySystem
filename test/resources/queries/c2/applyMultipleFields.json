@@ -1,0 +1,51 @@
+{
+	"title": "max and avg in apply",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"LT": {
+						"rooms_seats": 100
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"maxSeats",
+				"avgSeats"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"maxSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"maxSeats": {
+						"MAX": "rooms_seats"
+					}
+				},
+				{
+					"avgSeats": {
+						"AVG": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"rooms_shortname":"ALRD","maxSeats":94,"avgSeats":45.6},{"rooms_shortname":"CHBE","maxSeats":94,"avgSeats":77},{"rooms_shortname":"WOOD","maxSeats":88,"avgSeats":23.2},{"rooms_shortname":"MCLD","maxSeats":84,"avgSeats":61},{"rooms_shortname":"ESB","maxSeats":80,"avgSeats":80},{"rooms_shortname":"LASR","maxSeats":80,"avgSeats":40},{"rooms_shortname":"ANGU","maxSeats":80,"avgSeats":47.63},{"rooms_shortname":"DMP","maxSeats":80,"avgSeats":53.33},{"rooms_shortname":"BUCH","maxSeats":78,"avgSeats":39.28},{"rooms_shortname":"BIOL","maxSeats":76,"avgSeats":36},{"rooms_shortname":"LSK","maxSeats":75,"avgSeats":58.5},{"rooms_shortname":"GEOG","maxSeats":72,"avgSeats":49},{"rooms_shortname":"MCML","maxSeats":72,"avgSeats":17.59},{"rooms_shortname":"ORCH","maxSeats":72,"avgSeats":29.22},{"rooms_shortname":"PHRM","maxSeats":72,"avgSeats":15},{"rooms_shortname":"BRKX","maxSeats":70,"avgSeats":47},{"rooms_shortname":"SPPH","maxSeats":66,"avgSeats":27.67},{"rooms_shortname":"FSC","maxSeats":65,"avgSeats":34},{"rooms_shortname":"FORW","maxSeats":63,"avgSeats":47.33},{"rooms_shortname":"CEME","maxSeats":62,"avgSeats":37.8},{"rooms_shortname":"MATH","maxSeats":60,"avgSeats":52},{"rooms_shortname":"SCRF","maxSeats":60,"avgSeats":34.48},{"rooms_shortname":"UCLL","maxSeats":55,"avgSeats":44.33},{"rooms_shortname":"HEBB","maxSeats":54,"avgSeats":54},{"rooms_shortname":"EOSM","maxSeats":50,"avgSeats":50},{"rooms_shortname":"IONA","maxSeats":50,"avgSeats":50},{"rooms_shortname":"IBLC","maxSeats":50,"avgSeats":18.13},{"rooms_shortname":"SWNG","maxSeats":47,"avgSeats":37},{"rooms_shortname":"PCOH","maxSeats":40,"avgSeats":30.86},{"rooms_shortname":"OSBO","maxSeats":40,"avgSeats":40},{"rooms_shortname":"ANSO","maxSeats":37,"avgSeats":32},{"rooms_shortname":"HENN","maxSeats":36,"avgSeats":32},{"rooms_shortname":"FNH","maxSeats":28,"avgSeats":28},{"rooms_shortname":"AUDX","maxSeats":21,"avgSeats":20.5},{"rooms_shortname":"SOWK","maxSeats":16,"avgSeats":14.67}]
+}

@@ -1,0 +1,50 @@
+{
+	"title": "count and sum in apply",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"LT": {
+						"rooms_seats": 100
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"sumSeats",
+				"countSeats"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"sumSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"sumSeats": {
+						"SUM": "rooms_seats"
+					}
+				},
+				{
+					"countSeats": {
+						"COUNT": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected":[{"rooms_shortname":"ANGU","sumSeats":1286,"countSeats":14},{"rooms_shortname":"BUCH","sumSeats":1257,"countSeats":11},{"rooms_shortname":"SCRF","sumSeats":724,"countSeats":6},{"rooms_shortname":"SWNG","sumSeats":666,"countSeats":2},{"rooms_shortname":"MCML","sumSeats":299,"countSeats":6},{"rooms_shortname":"GEOG","sumSeats":294,"countSeats":5},{"rooms_shortname":"FSC","sumSeats":272,"countSeats":5},{"rooms_shortname":"IBLC","sumSeats":272,"countSeats":7},{"rooms_shortname":"ORCH","sumSeats":263,"countSeats":3},{"rooms_shortname":"MCLD","sumSeats":244,"countSeats":3},{"rooms_shortname":"WOOD","sumSeats":232,"countSeats":6},{"rooms_shortname":"ALRD","sumSeats":228,"countSeats":4},{"rooms_shortname":"PCOH","sumSeats":216,"countSeats":2},{"rooms_shortname":"CEME","sumSeats":189,"countSeats":5},{"rooms_shortname":"SPPH","sumSeats":166,"countSeats":6},{"rooms_shortname":"HEBB","sumSeats":162,"countSeats":1},{"rooms_shortname":"DMP","sumSeats":160,"countSeats":2},{"rooms_shortname":"MATH","sumSeats":156,"countSeats":2},{"rooms_shortname":"CHBE","sumSeats":154,"countSeats":2},{"rooms_shortname":"FORW","sumSeats":142,"countSeats":3},{"rooms_shortname":"PHRM","sumSeats":135,"countSeats":3},{"rooms_shortname":"UCLL","sumSeats":133,"countSeats":3},{"rooms_shortname":"LASR","sumSeats":120,"countSeats":2},{"rooms_shortname":"LSK","sumSeats":117,"countSeats":2},{"rooms_shortname":"BIOL","sumSeats":108,"countSeats":2},{"rooms_shortname":"ANSO","sumSeats":96,"countSeats":3},{"rooms_shortname":"HENN","sumSeats":96,"countSeats":2},{"rooms_shortname":"BRKX","sumSeats":94,"countSeats":2},{"rooms_shortname":"ESB","sumSeats":80,"countSeats":1},{"rooms_shortname":"EOSM","sumSeats":50,"countSeats":1},{"rooms_shortname":"IONA","sumSeats":50,"countSeats":1},{"rooms_shortname":"SOWK","sumSeats":44,"countSeats":2},{"rooms_shortname":"AUDX","sumSeats":41,"countSeats":2},{"rooms_shortname":"OSBO","sumSeats":40,"countSeats":1},{"rooms_shortname":"FNH","sumSeats":28,"countSeats":1}]}

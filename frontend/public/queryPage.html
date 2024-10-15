@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="english">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>Query Page</title>
+		<link href="queryPageStyle.css" rel="stylesheet"/>
+	</head>
+
+	<body>
+	<a href="index.html">
+		<button id="backToMain">Back to Main</button>
+	</a>
+		<div class="center">
+			<form>
+				Dataset id: <label>
+					<select id="datasetID">
+						<option value="">--Please choose a dataset--</option>
+					</select>
+				</label> <br/> <br/>
+				Subject: <label>
+					<input type="text" id="subject">
+				</label> <br/><br/>
+				Course #: <label>
+					<input type="text" id="courseNum">
+				</label> <br/><br/>
+				Year: <label>
+				<input type="text" id="year">
+			</label> <br/><br/>
+				<input type="button" id="query" value="Query">
+			</form>
+		</div>
+
+		<div id="response" class="center">
+		</div>
+		<script type="text/javascript" src="queryPage.js"></script>
+	</body>
+</html>

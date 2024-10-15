@@ -1,0 +1,127 @@
+{
+  "title": "Query combination of AND AND AND",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "sections_year": 2000
+              }
+            },
+            {
+              "IS": {
+                "sections_dept": "math"
+              }
+            }
+          ]
+        },
+        {
+          "AND": [
+            {
+              "EQ": {
+                "sections_avg": 88
+              }
+            },
+            {
+              "LT": {
+                "sections_fail": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_year"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"math",
+      "sections_id":"537",
+      "sections_avg":88,
+      "sections_instructor":"martin, gregory",
+      "sections_title":"elem number thry",
+      "sections_pass":5,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"13940",
+      "sections_year":2007
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"541",
+      "sections_avg":88,
+      "sections_instructor":"",
+      "sections_title":"harmonic anal i",
+      "sections_pass":6,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"29977",
+      "sections_year":2008
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"550",
+      "sections_avg":88,
+      "sections_instructor":"balmforth, neil",
+      "sections_title":"mthds asymp anal",
+      "sections_pass":12,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"5391",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"425",
+      "sections_avg":88,
+      "sections_instructor":"chen, jingyi",
+      "sections_title":"intr mod diff ge",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"34172",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"508",
+      "sections_avg":88,
+      "sections_instructor":"pramanik, malabika",
+      "sections_title":"complex analy",
+      "sections_pass":7,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"47240",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"545",
+      "sections_avg":88,
+      "sections_instructor":"slade, gordon",
+      "sections_title":"probability ii",
+      "sections_pass":4,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"90224",
+      "sections_year":2015
+    }
+  ]
+}

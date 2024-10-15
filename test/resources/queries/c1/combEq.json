@@ -1,0 +1,220 @@
+{
+  "title": "Query combination of EQ",
+  "input": {
+    "WHERE": {
+      "EQ": {
+        "sections_avg": 96
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"psyc",
+      "sections_id":"549",
+      "sections_avg":96,
+      "sections_instructor":"",
+      "sections_title":"masters thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"78270",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"psyc",
+      "sections_id":"501",
+      "sections_avg":96,
+      "sections_instructor":"",
+      "sections_title":"health psych",
+      "sections_pass":4,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"78245",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"psyc",
+      "sections_id":"501",
+      "sections_avg":96,
+      "sections_instructor":"de longis, anita",
+      "sections_title":"health psych",
+      "sections_pass":4,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"78244",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"phil",
+      "sections_id":"120",
+      "sections_avg":96,
+      "sections_instructor":"jackson, howard",
+      "sections_title":"log & crit think",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"20190",
+      "sections_year":2010
+    },
+    {
+      "sections_dept":"pcth",
+      "sections_id":"549",
+      "sections_avg":96,
+      "sections_instructor":"",
+      "sections_title":"ms thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"70959",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"kin",
+      "sections_id":"499",
+      "sections_avg":96,
+      "sections_instructor":"",
+      "sections_title":"kin project",
+      "sections_pass":4,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"59528",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"epse",
+      "sections_id":"528",
+      "sections_avg":96,
+      "sections_instructor":"kishor, nand",
+      "sections_title":"basic princ meas",
+      "sections_pass":6,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"29285",
+      "sections_year":2012
+    },
+    {
+      "sections_dept":"epse",
+      "sections_id":"303",
+      "sections_avg":96,
+      "sections_instructor":"",
+      "sections_title":"tch'g hghly able",
+      "sections_pass":14,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"33761",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"epse",
+      "sections_id":"303",
+      "sections_avg":96,
+      "sections_instructor":"porath, marion",
+      "sections_title":"tch'g hghly able",
+      "sections_pass":14,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"33760",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":96,
+      "sections_instructor":"maillard, keith",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"92879",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":96,
+      "sections_instructor":"maillard, keith",
+      "sections_title":"thesis",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"71164",
+      "sections_year":2012
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":96,
+      "sections_instructor":"galloway, steve",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"46409",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":96,
+      "sections_instructor":"taylor, timothy",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"26258",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"crwr",
+      "sections_id":"599",
+      "sections_avg":96,
+      "sections_instructor":"medved, maureen",
+      "sections_title":"thesis",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"26254",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"cnps",
+      "sections_id":"584",
+      "sections_avg":96,
+      "sections_instructor":"carter, john",
+      "sections_title":"prgm devl cnsl",
+      "sections_pass":19,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"33374",
+      "sections_year":2013
+    },
+    {
+      "sections_dept":"apsc",
+      "sections_id":"279",
+      "sections_avg":96,
+      "sections_instructor":"wassink, berend",
+      "sections_title":"eng mtls lab",
+      "sections_pass":19,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"19858",
+      "sections_year":2010
+    }
+  ]
+}

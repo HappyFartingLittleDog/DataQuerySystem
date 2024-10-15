@@ -1,0 +1,65 @@
+{
+	"title": "COUNT shortname grouped by type",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"countShortname"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"countShortname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"countShortname": {
+						"COUNT": "rooms_shortname"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_type":"Tiered Large Group",
+			"countShortname":30
+		},
+		{
+			"rooms_type":"Open Design General Purpose",
+			"countShortname":27
+		},
+		{
+			"rooms_type":"Small Group",
+			"countShortname":26
+		},
+		{
+			"rooms_type":"Case Style",
+			"countShortname":8
+		},
+		{
+			"rooms_type":"TBD",
+			"countShortname":2
+		},
+		{
+			"rooms_type":"Studio Lab",
+			"countShortname":2
+		},
+		{
+			"rooms_type":"",
+			"countShortname":1
+		},
+		{
+			"rooms_type":"Active Learning",
+			"countShortname":1
+		}
+	]
+}

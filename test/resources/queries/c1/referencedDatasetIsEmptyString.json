@@ -1,0 +1,19 @@
+{
+  "title": "Query with referenced dataset being empty string",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "_dept": "chin"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "_dept",
+        "_avg"
+      ],
+      "ORDER": "_dept"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

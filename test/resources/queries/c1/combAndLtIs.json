@@ -1,0 +1,169 @@
+{
+  "title": "Query combination of AND LT IS",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "LT": {
+            "sections_pass": 3
+          }
+        },
+        {
+          "IS": {
+            "sections_dept": "math"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_year"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"math",
+      "sections_id":"589",
+      "sections_avg":93.5,
+      "sections_instructor":"",
+      "sections_title":"msc major essay",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"61312",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"589",
+      "sections_avg":85,
+      "sections_instructor":"",
+      "sections_title":"msc major essay",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"48183",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"589",
+      "sections_avg":85,
+      "sections_instructor":"",
+      "sections_title":"msc major essay",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"13952",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"507",
+      "sections_avg":75.5,
+      "sections_instructor":"",
+      "sections_title":"meas thry&integr",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"13929",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"425",
+      "sections_avg":88,
+      "sections_instructor":"",
+      "sections_title":"intr mod diff ge",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"34173",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"507",
+      "sections_avg":75.5,
+      "sections_instructor":"brydges, david",
+      "sections_title":"meas thry&integr",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"13928",
+      "sections_year":2007
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"589",
+      "sections_avg":91.5,
+      "sections_instructor":"",
+      "sections_title":"msc major essay",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"97035",
+      "sections_year":2009
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"589",
+      "sections_avg":90,
+      "sections_instructor":"",
+      "sections_title":"msc major essay",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"48182",
+      "sections_year":2011
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"100",
+      "sections_avg":80,
+      "sections_instructor":"",
+      "sections_title":"df calc ap ph sc",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"3746",
+      "sections_year":2011
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"100",
+      "sections_avg":80,
+      "sections_instructor":"",
+      "sections_title":"df calc ap ph sc",
+      "sections_pass":1,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"27204",
+      "sections_year":2012
+    },
+    {
+      "sections_dept":"math",
+      "sections_id":"425",
+      "sections_avg":88,
+      "sections_instructor":"chen, jingyi",
+      "sections_title":"intr mod diff ge",
+      "sections_pass":2,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"34172",
+      "sections_year":2013
+    }
+  ]
+}

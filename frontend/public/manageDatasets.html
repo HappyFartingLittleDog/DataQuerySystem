@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<title>310 Frontend</title>
+	<link href="manageDatasetsStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div>
+	<a href="index.html">
+		<button id="backToMain">Back to Main</button>
+	</a>
+</div>
+<input id="addDataset" type="file" accept=".zip" />
+<label class = "label" for="addDataset">Add Dataset</label>
+<div id="removeDataset" class="removeDataset" >Remove Datasets</div>
+<div id ="form_1" class="form">
+	<form >
+		<div class="dataset_info"><div class="title">Dataset Information</div></div>
+		<hr>
+		<div class="dataset_id_add"><input type="text" name="dataset_id_add" placeholder="&nbsp;DatasetID"></div>
+
+		<input class="input_1" type="radio" name="kind" value="sections"> Sections<br>
+		<input class="input_1" type="radio" name="kind" value="rooms"> Rooms<br>
+
+		<input id = "cancelAddDataset" class="cancel_1" type="button" value="cancel">
+		<input id = "submitAddDataset" class="submit_1" type="button" value="submit">
+	</form>
+</div>
+<div id ="form_2" class="form">
+	<form >
+		<div class="dataset_info"><div class="title">Dataset ID to be removed</div></div>
+		<hr>
+		<div class="dataset_id_remove"><input type="text" name="dataset_id_remove" placeholder="&nbsp;DatasetID"></div>
+
+		<input id = "cancelRemoveDataset" class="cancel_1" type="button" value="cancel">
+		<input id = "submitRemoveDataset" class="submit_1" type="button" value="submit">
+	</form>
+</div>
+<div id = "loading_1" class="loading_1">
+Loading...
+</div>
+
+
+
+<h3 class="title">Added Datasets</h3>
+<table id = "table">
+	<thead>
+	<tr><th>Dataset ID</th><th>numRows</th><th>Kind</th></tr>
+	</thead>
+	<tbody id = "tbody">
+
+	</tbody>
+</table>
+
+
+
+
+
+
+
+<script type="text/javascript" src="manageDatasets.js"></script>
+</body>
+</html>

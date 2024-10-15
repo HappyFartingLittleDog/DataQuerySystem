@@ -1,0 +1,228 @@
+{
+	"title": "count and sum in apply",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"LT": {
+						"rooms_seats": 100
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"sumSeats",
+				"countSeats"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"countSeats",
+					"sumSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"sumSeats": {
+						"MAX": "rooms_seats"
+					}
+				},
+				{
+					"countSeats": {
+						"COUNT": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+			{
+				"rooms_shortname": "ANGU",
+				"sumSeats": 80,
+				"countSeats": 14
+			},
+			{
+				"rooms_shortname": "BUCH",
+				"sumSeats": 78,
+				"countSeats": 11
+			},
+			{
+				"rooms_shortname": "IBLC",
+				"sumSeats": 50,
+				"countSeats": 7
+			},
+			{
+				"rooms_shortname": "WOOD",
+				"sumSeats": 88,
+				"countSeats": 6
+			},
+			{
+				"rooms_shortname": "MCML",
+				"sumSeats": 72,
+				"countSeats": 6
+			},
+			{
+				"rooms_shortname": "SPPH",
+				"sumSeats": 66,
+				"countSeats": 6
+			},
+			{
+				"rooms_shortname": "SCRF",
+				"sumSeats": 60,
+				"countSeats": 6
+			},
+			{
+				"rooms_shortname": "GEOG",
+				"sumSeats": 72,
+				"countSeats": 5
+			},
+			{
+				"rooms_shortname": "FSC",
+				"sumSeats": 65,
+				"countSeats": 5
+			},
+			{
+				"rooms_shortname": "CEME",
+				"sumSeats": 62,
+				"countSeats": 5
+			},
+			{
+				"rooms_shortname": "ALRD",
+				"sumSeats": 94,
+				"countSeats": 4
+			},
+			{
+				"rooms_shortname": "MCLD",
+				"sumSeats": 84,
+				"countSeats": 3
+			},
+			{
+				"rooms_shortname": "ORCH",
+				"sumSeats": 72,
+				"countSeats": 3
+			},
+			{
+				"rooms_shortname": "PHRM",
+				"sumSeats": 72,
+				"countSeats": 3
+			},
+			{
+				"rooms_shortname": "FORW",
+				"sumSeats": 63,
+				"countSeats": 3
+			},
+			{
+				"rooms_shortname": "UCLL",
+				"sumSeats": 55,
+				"countSeats": 3
+			},
+			{
+				"rooms_shortname": "ANSO",
+				"sumSeats": 37,
+				"countSeats": 3
+			},
+			{
+				"rooms_shortname": "CHBE",
+				"sumSeats": 94,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "LASR",
+				"sumSeats": 80,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "DMP",
+				"sumSeats": 80,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "BIOL",
+				"sumSeats": 76,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "LSK",
+				"sumSeats": 75,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "BRKX",
+				"sumSeats": 70,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "MATH",
+				"sumSeats": 60,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "SWNG",
+				"sumSeats": 47,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "PCOH",
+				"sumSeats": 40,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "HENN",
+				"sumSeats": 36,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "AUDX",
+				"sumSeats": 21,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "SOWK",
+				"sumSeats": 16,
+				"countSeats": 2
+			},
+			{
+				"rooms_shortname": "ESB",
+				"sumSeats": 80,
+				"countSeats": 1
+			},
+			{
+				"rooms_shortname": "HEBB",
+				"sumSeats": 54,
+				"countSeats": 1
+			},
+			{
+				"rooms_shortname": "EOSM",
+				"sumSeats": 50,
+				"countSeats": 1
+			},
+			{
+				"rooms_shortname": "IONA",
+				"sumSeats": 50,
+				"countSeats": 1
+			},
+			{
+				"rooms_shortname": "OSBO",
+				"sumSeats": 40,
+				"countSeats": 1
+			},
+			{
+				"rooms_shortname": "FNH",
+				"sumSeats": 28,
+				"countSeats": 1
+			}
+		]
+	}

@@ -1,0 +1,100 @@
+{
+  "title": "Query combination of IS with asterisk at the back",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "sections_uuid": "555*"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_id"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"geog",
+      "sections_id":"122",
+      "sections_avg":70.22,
+      "sections_instructor":"",
+      "sections_title":"geog mod glob ii",
+      "sections_pass":50,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"5557",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"geog",
+      "sections_id":"122",
+      "sections_avg":70.22,
+      "sections_instructor":"brownstein, david",
+      "sections_title":"geog mod glob ii",
+      "sections_pass":50,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"5556",
+      "sections_year":2011
+    },
+    {
+      "sections_dept":"geog",
+      "sections_id":"290",
+      "sections_avg":78.42,
+      "sections_instructor":"",
+      "sections_title":"intr geog canada",
+      "sections_pass":36,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"5559",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"geog",
+      "sections_id":"290",
+      "sections_avg":78.42,
+      "sections_instructor":"dyce, matthew",
+      "sections_title":"intr geog canada",
+      "sections_pass":36,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"5558",
+      "sections_year":2011
+    },
+    {
+      "sections_dept":"spha",
+      "sections_id":"562",
+      "sections_avg":80.16,
+      "sections_instructor":"",
+      "sections_title":"hlth care law",
+      "sections_pass":25,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"5551",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"spha",
+      "sections_id":"562",
+      "sections_avg":80.16,
+      "sections_instructor":"",
+      "sections_title":"hlth care law",
+      "sections_pass":25,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"5550",
+      "sections_year":2008
+    }
+  ]
+}

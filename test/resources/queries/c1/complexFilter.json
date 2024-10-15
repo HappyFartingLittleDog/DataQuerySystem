@@ -1,0 +1,69 @@
+{
+	"title": "more complex filters",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"AND": [
+						{
+							"IS": {
+								"rooms_furniture": "*Tables*"
+							}
+						},
+						{
+							"GT": {
+								"rooms_seats": 50
+							}
+						}
+					]
+				},
+				{
+					"NOT": {
+						"LT": {
+							"rooms_seats": 100
+						}
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"avgSeats",
+				"sumSeats",
+				"countSeats"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"avgSeats",
+					"countSeats",
+					"sumSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"sumSeats": {
+						"SUM": "rooms_seats"
+					}
+				},
+				{
+					"countSeats": {
+						"COUNT": "rooms_seats"
+					}
+				},
+				{
+					"avgSeats": {
+						"AVG": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected":[{"rooms_shortname":"CEME","avgSeats":100,"sumSeats":100,"countSeats":1},{"rooms_shortname":"GEOG","avgSeats":100,"sumSeats":100,"countSeats":1},{"rooms_shortname":"IONA","avgSeats":100,"sumSeats":100,"countSeats":1},{"rooms_shortname":"BUCH","avgSeats":108,"sumSeats":216,"countSeats":1},{"rooms_shortname":"WOOD","avgSeats":120,"sumSeats":360,"countSeats":1},{"rooms_shortname":"MCLD","avgSeats":129.5,"sumSeats":259,"countSeats":2},{"rooms_shortname":"IBLC","avgSeats":133,"sumSeats":266,"countSeats":2},{"rooms_shortname":"DMP","avgSeats":140,"sumSeats":280,"countSeats":2},{"rooms_shortname":"FRDM","avgSeats":160,"sumSeats":160,"countSeats":1},{"rooms_shortname":"SWNG","avgSeats":188.75,"sumSeats":755,"countSeats":3},{"rooms_shortname":"LSK","avgSeats":194,"sumSeats":388,"countSeats":2},{"rooms_shortname":"CHBE","avgSeats":200,"sumSeats":200,"countSeats":1},{"rooms_shortname":"PHRM","avgSeats":201.5,"sumSeats":403,"countSeats":2},{"rooms_shortname":"ANGU","avgSeats":260,"sumSeats":260,"countSeats":1},{"rooms_shortname":"LSC","avgSeats":275,"sumSeats":825,"countSeats":2},{"rooms_shortname":"SRC","avgSeats":299,"sumSeats":897,"countSeats":1},{"rooms_shortname":"HEBB","avgSeats":375,"sumSeats":375,"countSeats":1},{"rooms_shortname":"OSBO","avgSeats":442,"sumSeats":442,"countSeats":1}]}

@@ -1,0 +1,160 @@
+{
+  "title": "Query combination of IS with asterisk at front and back",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "sections_uuid": "*8888*"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sections_dept",
+        "sections_id",
+        "sections_avg",
+        "sections_instructor",
+        "sections_title",
+        "sections_pass",
+        "sections_fail",
+        "sections_audit",
+        "sections_uuid",
+        "sections_year"
+      ],
+      "ORDER": "sections_id"
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "sections_dept":"fren",
+      "sections_id":"111",
+      "sections_avg":72.08,
+      "sections_instructor":"moniuk. deborah;rouget, christine;simpson, anne",
+      "sections_title":"intermed fren 1",
+      "sections_pass":25,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"58888",
+      "sections_year":2012
+    },
+    {
+      "sections_dept":"eosc",
+      "sections_id":"118",
+      "sections_avg":73.77,
+      "sections_instructor":"dzikowski, tashia;turner, david",
+      "sections_title":"gold & gems",
+      "sections_pass":176,
+      "sections_fail":11,
+      "sections_audit":0,
+      "sections_uuid":"68888",
+      "sections_year":2012
+    },
+    {
+      "sections_dept":"poli",
+      "sections_id":"220",
+      "sections_avg":75.38,
+      "sections_instructor":"goenaga orrego, agustin",
+      "sections_title":"intr comp poltcs",
+      "sections_pass":124,
+      "sections_fail":1,
+      "sections_audit":1,
+      "sections_uuid":"8888",
+      "sections_year":2014
+    },
+    {
+      "sections_dept":"comm",
+      "sections_id":"355",
+      "sections_avg":75.24,
+      "sections_instructor":"chung, tran khue",
+      "sections_title":"income tax",
+      "sections_pass":40,
+      "sections_fail":1,
+      "sections_audit":0,
+      "sections_uuid":"38888",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"bota",
+      "sections_id":"501",
+      "sections_avg":84.86,
+      "sections_instructor":"",
+      "sections_title":"sem in botany",
+      "sections_pass":14,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"18888",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"bapa",
+      "sections_id":"501",
+      "sections_avg":80.65,
+      "sections_instructor":"appelbe, trent",
+      "sections_title":"govrnt & busness",
+      "sections_pass":48,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"88889",
+      "sections_year":2011
+    },
+    {
+      "sections_dept":"sowk",
+      "sections_id":"570",
+      "sections_avg":86.7,
+      "sections_instructor":"",
+      "sections_title":"directed study",
+      "sections_pass":20,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"88883",
+      "sections_year":1900
+    },
+    {
+      "sections_dept":"sowk",
+      "sections_id":"570",
+      "sections_avg":82.25,
+      "sections_instructor":"",
+      "sections_title":"directed study",
+      "sections_pass":4,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"88882",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"sowk",
+      "sections_id":"570",
+      "sections_avg":95,
+      "sections_instructor":"clark, natalie",
+      "sections_title":"directed study",
+      "sections_pass":4,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"88881",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"sowk",
+      "sections_id":"570",
+      "sections_avg":86.2,
+      "sections_instructor":"",
+      "sections_title":"directed study",
+      "sections_pass":5,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"88880",
+      "sections_year":2015
+    },
+    {
+      "sections_dept":"hist",
+      "sections_id":"599",
+      "sections_avg":84.4,
+      "sections_instructor":"bronfman, alejandra",
+      "sections_title":"ma research sem",
+      "sections_pass":5,
+      "sections_fail":0,
+      "sections_audit":0,
+      "sections_uuid":"48888",
+      "sections_year":2011
+    }
+  ]
+}
