@@ -26,6 +26,10 @@ In the project folder:
 1. `yarn test` to run the test suite.
 
 1. `yarn pretty` to prettify your project code.
+   
+1. `yarn start` to start the server, use localhost:4321 to access
+
+
 
 ## Running and testing from an IDE
 
